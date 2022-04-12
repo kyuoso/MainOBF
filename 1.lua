@@ -1,21 +1,24 @@
-for i = 6453, 6464 do
-	local DiscordInviteRequest = function()
-		local Request = RequestFunction({
-			Url = string.format(DiscordAPI, tostring(i)),
-			Method = "POST",
-			Body = HttpService:JSONEncode({
-				nonce = HttpService:GenerateGUID(false),
-				args = {
-					invite = {code = _G.Config.InviteCode},
-					code = _G.Config.InviteCode
-				},
-				cmd = "INVITE_BROWSER"
-			}),
-			Headers = {
-				["Origin"] = "https://discord.com",
-				["Content-Type"] = "application/json"
-			}
-		})
-	end
-	spawn(DiscordInviteRequest)
-end
+local req = http_request or request or (syn and syn.request) or (fluxus and fluxus.request) or (http and http.request)
+
+local inv = {}
+
+function inv:discordInvite(inviteCode)
+req(
+   {
+       Url = "http://127.0.0.1:6463/rpc?v=1",
+       Method = "POST",
+       Headers = {
+           ["Content-Type"] = "application/json",
+           ["origin"] = "https://discord.com",
+       },
+       Body = game:GetService("HttpService"):JSONEncode(
+           {
+               ["args"] = {
+                   ["code"] = inviteCode,
+               },
+               ["cmd"] = "INVITE_BROWSER",
+               ["nonce"] = "."
+           })
+   })
+  end
+return inv

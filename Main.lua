@@ -16,14 +16,16 @@ local HttpService = game:GetService("HttpService")
 local DiscordAPI = "http://127.0.0.1:6463/rpc?v=1"
 local RequestFunction
 
-local Librarys = {
-	Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))(),
-	MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
-}
 
-local inviteinfo = Librarys.Notification.new("info", "Info", "Info Body Message")
-inviteinfo:changeHeading("Joining Discord Server...")
-inviteinfo:changeBody("Discord Server Code: " .. _G.Config.InviteCode)
-inviteinfo:deleteTimeout(5)
-wait(0.2)
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
+local Notify = AkaliNotif.Notify;
+
+wait(1)
+
+Notify({
+	Description = "Joining Discord... ( Only for application , not browser. )";
+	Title = "Message";
+	Duration = 5;
+})
+wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/1.lua"))()

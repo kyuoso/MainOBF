@@ -23,7 +23,7 @@ local Notify = AkaliNotif.Notify;
 wait(1);
 
 Notify({
-	Description = "Joining Discord... ( Only for application , not browser. )";
+	Description = "Joining Discord... ( Code: " .. _G.Config.InviteCode .. " )";
 	Title = "Message";
 	Duration = 5;
 });

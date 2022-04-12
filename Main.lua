@@ -17,15 +17,15 @@ local DiscordAPI = "http://127.0.0.1:6463/rpc?v=1"
 local RequestFunction
 
 
-local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
-local Notify = AkaliNotif.Notify
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
+local Notify = AkaliNotif.Notify;
 
-wait(1)
+wait(1);
 
 Notify({
-	Description = "Joining Discord... ( Only for application , not browser. )"
-	Title = "Message"
-	Duration = 5
+	Description = "Joining Discord... ( Only for application , not browser. )";
+	Title = "Message";
+	Duration = 5;
 })
 wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/1.lua"))()

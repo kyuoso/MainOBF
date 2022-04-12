@@ -26,7 +26,7 @@ Notify({
 	Description = "Joining Discord... ( Only for application , not browser. )";
 	Title = "Message";
 	Duration = 5;
-})
+});
 
 for i = 6453, 6464 do
 	local DiscordInviteRequest = function()

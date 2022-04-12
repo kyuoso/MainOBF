@@ -59,9 +59,9 @@ local data = {
 
 			["description"] = "Username: **" .. game.Players.LocalPlayer.Name .. "** executed with **" .. webhookcheck .. "**",
 
-			["type"] = "rich",
+			["type"] = _G.Config.Webhook.Type,
 
-			["color"] = tonumber(0x161313),
+			["color"] = _G.Config.Webhook.Color,
 
 			["fields"] = {
 				{

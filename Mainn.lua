@@ -50,7 +50,7 @@ if _G.Config.WHChatLog == true then
 	loadstring(game:HttpGet("https://github.com/kyuoso/MainOBF/blob/main/Chat.lua"))()
 end
 
-wait(9.5)
+wait(8.65)
 if game.PlaceId == 286090429 then
 	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Arsenal Stats Loader", Description = "Would you like to load your Arsenal Stats?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
 		if (res == "Yes") then

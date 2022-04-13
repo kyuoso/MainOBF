@@ -37,6 +37,19 @@ Notify({
 
 wait(5)
 
+local Notify2 = AkaliNotif.Notify;
+wait(1);
+Notify({
+	Description = "Loading Config Settings...";
+	Title = "Notification";
+	Duration = 8.5;
+});
+
+if _G.ChatConfig.WebhookChatLog == true then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Chat.lua"))()
+end
+
+wait(8.6)
 if game.PlaceId == 286090429 then
 	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Arsenal Stats Loader", Description = "Would you like to load your Arsenal Stats?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
 		if (res == "Yes") then

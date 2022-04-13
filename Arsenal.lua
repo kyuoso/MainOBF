@@ -42,7 +42,7 @@ local data = {
        {
            ["title"] = Player.Name .. "'s Arsenal Stats",
            
-		   ["description"] = "Username: **" .. game.Players.LocalPlayer.Name.."** executed with **"..webhookcheck.."**",
+		   ["description"] = "Username: **" .. game.Players.LocalPlayer.DisplayName .. "** **(@" .. game.Players.LocalPlayer.Name .. ")**, Executed with **"..webhookcheck.."**",
           	
 		   ["type"] = _G.Config.Webhook.Type,
 			

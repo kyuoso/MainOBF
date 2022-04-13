@@ -37,6 +37,8 @@ Notify({
 
 wait(5)
 
+-- Config load
+
 local Notify2 = AkaliNotif.Notify;
 wait(1);
 Notify({
@@ -45,10 +47,7 @@ Notify({
 	Duration = 8.5;
 });
 
-if _G.Config.WHChatLog == true then
-	print("Chat Log Enabled")
-	loadstring(game:HttpGet("https://github.com/kyuoso/MainOBF/blob/main/Chat.lua"))()
-end
+-- Game Detection
 
 wait(8.65)
 if game.PlaceId == 286090429 then

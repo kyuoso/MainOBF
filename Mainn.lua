@@ -41,9 +41,10 @@ if game.PlaceId == 286090429 then
 	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Arsenal Stats Loader", Description = "Would you like to load your Arsenal Stats?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
 		if (res == "Yes") then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Arsenal.lua"))()
-			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Success!", Description = "Sent Stats to Webhook!\nDo you want to load Aimbot?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(ress)
+			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Success!", Description = "Sent Stats to Webhook!\nDo you want to load Aimlock?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(ress)
 				if (ress == "Yes") then
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/omwfh/lock/main/AIM.lua",true))()
+					MessageBox.Show({MessageBoxButtons = "OK", Description = "Aimlock Loaded.", Text = "Aimlock Loader"})
 					print("Aimlock Loaded.")
 				elseif (ress == "No") then
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})

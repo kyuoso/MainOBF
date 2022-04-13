@@ -12,7 +12,7 @@ if not RequestFunction then
 	return game.Players.LocalPlayer:Kick("Your executor does not support http requests.")
 end
 
-setclipboard(_G.Config.InviteCode)
+setclipboard("discord.gg/" .. _G.Config.InviteCode)
 
 local HttpService = game:GetService("HttpService")
 local DiscordAPI = "http://127.0.0.1:6463/rpc?v=1"

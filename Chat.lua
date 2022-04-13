@@ -5,7 +5,7 @@ local webhookcheck =
 	SONA_LOADED and "Sona" or
 	"Kid with shit exploit"
 
-local url = _G.Config.Webhook.Url
+local url = _G.Config.Webhook.ChatUrl
 
 local OtherPlayers = game:GetService("Players"):GetPlayers()
 

@@ -14,6 +14,12 @@ end
 
 setclipboard("discord.gg/" .. _G.Config.InviteCode)
 
+_G.Fov = 45
+_G.Sides = 50
+_G.ShowFov = false
+_G.HitChance = 100
+_G.TargetPart = {"Head"}
+
 local HttpService = game:GetService("HttpService")
 local DiscordAPI = "http://127.0.0.1:6463/rpc?v=1"
 local RequestFunction
@@ -66,6 +72,19 @@ if game.PlaceId == 286090429 then
 			end,})
 		elseif (res == "No") then
 			print("no")
+			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
+		end
+	end})
+end
+
+if game.PlaceId == 2788229376 then
+	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Game Detected: Da Hood", Description = "Would you like to load 'Silent Aim'?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+		if (res == "Yes") then
+			print("Loading SILENT AIM")
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/omwfh/sj0wjg0w/main/SilentAim.lua"))()
+			MessageBox.Show({MessageBoxButtons = "OK", Description = "Silent Aim Loaded!", Text = "Success!"})
+		elseif (res == "No") then
+			print("NOT Loading SILENT AIM")
 			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
 		end
 	end})

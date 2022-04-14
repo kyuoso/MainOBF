@@ -141,8 +141,16 @@ if game.PlaceId == 286090429 then
 			end,})
 		elseif (res == "No") then
 			print("no")
-			Teleport()
-			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
+			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Oh!", Description = "Arsenal Stats not Loaded!\nDo you want to load Aimlock?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(ress)
+				if (ress == "Yes") then
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/omwfh/lock/main/AIM.lua",true))()
+					MessageBox.Show({MessageBoxButtons = "OK", Description = "Aimlock Loaded.", Text = "Aimlock Loader"})
+					print("Aimlock Loaded.")
+				elseif (ress == "No") then
+					MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
+					print("Aimlock NOT Loaded.")
+				end
+			end,})
 		end
 	end})
 end

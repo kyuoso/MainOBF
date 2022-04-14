@@ -209,11 +209,11 @@ if game.PlaceId == 1962086868 then
 	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Loading Modules...", Description = "Do you want to see your ping?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
 		if (res == "Yes") then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Ping.lua"))()
-			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Loading Modules...", Description = "Created PING Gui!\nDo you want godmode?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(ress)
-				if (ress == "Yes") then
+			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Loading Modules...", Description = "Created PING Gui!\nDo you want godmode?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(cock)
+				if (cock == "Yes") then
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/TOHGodmode.lua"))()
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Godmode Initiated.", Text = "Modules Loaded!"})
-				elseif (ress == "No") then
+				elseif (cock == "No") then
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
 				end
 			end,})

@@ -126,6 +126,13 @@ Notify({
 
 wait(8.65)
 if game.PlaceId == 286090429 then
+	local NotifyArsenal = AkaliNotif.Notify;
+	NotifyArsenal({
+		Description = "Game Detected: Arsenal";
+		Title = "Notification";
+		Duration = 5;
+	});
+	wait(2.5)
 	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Arsenal Stats Loader", Description = "Would you like to load your Arsenal Stats?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
 		if (res == "Yes") then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Arsenal.lua"))()
@@ -151,6 +158,24 @@ if game.PlaceId == 286090429 then
 					print("Aimlock NOT Loaded.")
 				end
 			end,})
+		end
+	end})
+end
+
+if game.PlaceId == 2788229376 then
+	local NotifyDaHood = AkaliNotif.Notify;
+	NotifyDaHood({
+		Description = "Game Detected: Da Hood";
+		Title = "Notification";
+		Duration = 5;
+	});
+	wait(2.5)
+	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Game Loader", Description = "Load SILENT AIM?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+		if (res == "Yes") then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/SilentAim.lua"))()
+			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
+		elseif (res == "No") then
+			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
 		end
 	end})
 end

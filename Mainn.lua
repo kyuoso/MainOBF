@@ -150,7 +150,7 @@ if game.PlaceId == 286090429 then
 			print("no")
 			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Oh!", Description = "Arsenal Stats not Loaded!\nDo you want to load Aimlock?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(ress)
 				if (ress == "Yes") then
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/omwfh/lock/main/AIM.lua",true))()
+					loadstring(game:HttpGet("h	ttps://raw.githubusercontent.com/omwfh/lock/main/AIM.lua",true))()
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Aimlock Loaded.", Text = "Aimlock Loader"})
 					print("Aimlock Loaded.")
 				elseif (ress == "No") then
@@ -170,7 +170,7 @@ if game.PlaceId == 2788229376 then
 		Duration = 5;
 	});
 	wait(2.5)
-	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Game Loader", Description = "Load SILENT AIM?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nDo you want to load in Silent AIM? ( Best with DB)", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
 		if (res == "Yes") then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/SilentAim.lua"))()
 			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})

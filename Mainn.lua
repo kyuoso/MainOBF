@@ -186,7 +186,7 @@ if game.PlaceId == 2788229376 then
 				end
 			end,})
 		elseif (res == "No") then
-			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nOkay!\nDo you want to see your ping?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(resss)
+			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nOkay!\nDo you want to see your ping? ( BANNABLE DO NOT USE ATM! )", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(resss)
 				if (resss == "Yes") then
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Ping.lua"))()
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Created PING Gui!", Text = "Message"})

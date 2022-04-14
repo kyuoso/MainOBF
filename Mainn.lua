@@ -197,3 +197,59 @@ if game.PlaceId == 2788229376 then
 		end
 	end})
 end
+
+if game.PlaceId == 1962086868 then
+	local NotifyDaHood = AkaliNotif.Notify;
+	NotifyDaHood({
+		Description = "Game Detected: Tower Of Hell";
+		Title = "Notification";
+		Duration = 5;
+	});
+	wait(2.5)
+	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nOkay!\nDo you want to see your ping?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+		if (res == "Yes") then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Ping.lua"))()
+			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nCreated PING Gui!\nDo you want godmode?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(ress)
+				if (ress == "Yes") then
+					local LocalPlayer = game:GetService("Players").LocalPlayer
+					local function Invincibility()
+						if LocalPlayer.Character then
+							for i, v in pairs(LocalPlayer.Character:GetChildren()) do
+								if v.Name == "hitbox" then
+									v:Destroy()
+								end
+							end
+						end
+					end 
+					while wait(0.5) do
+						Invincibility(LocalPlayer)
+					end
+					MessageBox.Show({MessageBoxButtons = "OK", Description = "Modules Loaded!\nGodmode Initiated.", Text = "Message"})
+				elseif (ress == "No") then
+					MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
+				end
+			end,})
+		elseif (res == "No") then
+			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nPING Disabled.\nDo you want godmode?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(resss)
+				if (resss == "Yes") then
+					local LocalPlayer = game:GetService("Players").LocalPlayer
+					local function Invincibility()
+						if LocalPlayer.Character then
+							for i, v in pairs(LocalPlayer.Character:GetChildren()) do
+								if v.Name == "hitbox" then
+									v:Destroy()
+								end
+							end
+						end
+					end 
+					while wait(0.5) do
+						Invincibility(LocalPlayer)
+					end
+					MessageBox.Show({MessageBoxButtons = "OK", Description = "Modules Loaded!\nGodmode Initiated.", Text = "Message"})
+				elseif (resss == "No") then
+					MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
+				end
+			end,})
+		end
+	end,})
+end

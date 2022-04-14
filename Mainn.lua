@@ -211,19 +211,7 @@ if game.PlaceId == 1962086868 then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Ping.lua"))()
 			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Loading Modules...", Description = "Created PING Gui!\nDo you want godmode?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(ress)
 				if (ress == "Yes") then
-					local LocalPlayer = game:GetService("Players").LocalPlayer
-					local function Invincibility()
-						if LocalPlayer.Character then
-							for i, v in pairs(LocalPlayer.Character:GetChildren()) do
-								if v.Name == "hitbox" then
-									v:Destroy()
-								end
-							end
-						end
-					end 
-					while wait(0.5) do
-						Invincibility(LocalPlayer)
-					end
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/TOHGodmode.lua"))()
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Godmode Initiated.", Text = "Modules Loaded!"})
 				elseif (ress == "No") then
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
@@ -232,19 +220,7 @@ if game.PlaceId == 1962086868 then
 		elseif (res == "No") then
 			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Modules Loaded!", Description = "PING Disabled.\nDo you want godmode?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(resss)
 				if (resss == "Yes") then
-					local LocalPlayer = game:GetService("Players").LocalPlayer
-					local function Invincibility()
-						if LocalPlayer.Character then
-							for i, v in pairs(LocalPlayer.Character:GetChildren()) do
-								if v.Name == "hitbox" then
-									v:Destroy()
-								end
-							end
-						end
-					end 
-					while wait(0.5) do
-						Invincibility(LocalPlayer)
-					end
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/TOHGodmode.lua"))()
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Godmode Initiated.", Text = "Modules Loaded!"})
 				elseif (resss == "No") then
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})

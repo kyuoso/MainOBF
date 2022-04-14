@@ -201,7 +201,7 @@ end
 if game.PlaceId == 1962086868 then
 	local NotifyDaHood = AkaliNotif.Notify;
 	NotifyDaHood({
-		Description = "Game Detected: Tower Of Hell";
+		Description = "Game Detected: Tower Of Hell ( Kinda Buggy ATM )";
 		Title = "Notification";
 		Duration = 5;
 	});

@@ -1,10 +1,3 @@
-local webhookcheck =
-	is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-	secure_load and "Sentinel" or
-	KRNL_LOADED and "Krnl" or
-	SONA_LOADED and "Sona" or
-	"Kid with shit exploit"
-
 local url = _G.Config.Webhook.Url
 
 local OtherPlayers = game:GetService("Players"):GetPlayers()

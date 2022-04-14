@@ -177,7 +177,7 @@ if game.PlaceId == 2788229376 then
 	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nDo you want to load in Silent AIM? ( Best with DB)", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
 		if (res == "Yes") then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/SilentAim.lua"))()
-			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loaded Silent AIM!\nDo you want to see your ping?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(ress)
+			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nLoaded Silent AIM Script!\nDo you want to see your ping?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(ress)
 				if (ress == "Yes") then
 					loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Ping.lua"))()
 					MessageBox.Show({MessageBoxButtons = "OK", Description = "Created PING Gui!", Text = "Message"})
@@ -186,7 +186,14 @@ if game.PlaceId == 2788229376 then
 				end
 			end,})
 		elseif (res == "No") then
-			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
+			MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nOkay!\nDo you want to see your ping?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(resss)
+				if (resss == "Yes") then
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/Ping.lua"))()
+					MessageBox.Show({MessageBoxButtons = "OK", Description = "Created PING Gui!", Text = "Message"})
+				elseif (resss == "No") then
+					MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
+				end
+			end,})
 		end
 	end})
 end

@@ -173,7 +173,7 @@ if game.PlaceId == 2788229376 then
 	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Notification", Description = "Loading Modules...\nDo you want to load in Silent AIM? ( Best with DB)", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
 		if (res == "Yes") then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/SilentAim.lua"))()
-			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
+			MessageBox.Show({MessageBoxButtons = "OK", Description = "Silent Aim Loaded!", Text = "Message"})
 		elseif (res == "No") then
 			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
 		end

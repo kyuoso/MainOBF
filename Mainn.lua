@@ -13,6 +13,8 @@ if not RequestFunction then
 end
 
 setclipboard("discord.gg/" .. _G.Config.InviteCode)
+local LocalPlayer = game.Players.LocalPlayer
+local FunctionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/kyuoso/MainOBF/main/FunctionModule.lua"))()
 
 local HttpService = game:GetService("HttpService")
 local DiscordAPI = "http://127.0.0.1:6463/rpc?v=1"
@@ -49,6 +51,7 @@ Notify({
 
 -- Game Detection
 
+
 wait(8.65)
 if game.PlaceId == 286090429 then
 	MessageBox.Show({Position = UDim2.new(0.5, 0, 0.5, 0), Text = "Arsenal Stats Loader", Description = "Would you like to load your Arsenal Stats?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
@@ -66,6 +69,7 @@ if game.PlaceId == 286090429 then
 			end,})
 		elseif (res == "No") then
 			print("no")
+			FunctionLib:ServerHop()
 			MessageBox.Show({MessageBoxButtons = "OK", Description = "Okay!", Text = "Message"})
 		end
 	end})

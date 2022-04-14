@@ -1,8 +1,8 @@
 local FUCKYOU = {}
 
-function FUCKYOU:ServerHop()
+function FUCKYOU.ServerHop()
 	pcall(function()
-		local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100"))
+		local Servers = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games" .. game.PlaceId .. "/servers/Public?sortOrder=AscZ&limit=100"))
 		spawn(function()
 			while wait(1) do
 				for i, v in pairs(Servers.data) do
